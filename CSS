@@ -1,0 +1,61 @@
+body{
+    margin:0;
+    overflow:hidden;
+    background:linear-gradient(
+        45deg,
+        red,
+        yellow,
+        lime,
+        cyan,
+        magenta
+    );
+    background-size:400% 400%;
+    animation:bgMove 3s infinite;
+    font-family:Comic Sans MS, cursive;
+    text-align:center;
+}
+
+@keyframes bgMove{
+    0%{background-position:0 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0 50%;}
+}
+
+h1{
+    font-size:4rem;
+    animation:spin 4s linear infinite;
+}
+
+@keyframes spin{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+.message{
+    font-size:2rem;
+    margin-top:50px;
+    font-weight:bold;
+}
+
+button{
+    position:absolute;
+    padding:20px 40px;
+    font-size:24px;
+    cursor:pointer;
+}
+
+.popup{
+    position:absolute;
+    background:white;
+    border:5px solid black;
+    padding:15px;
+    font-size:20px;
+    animation:shake .2s infinite;
+}
+
+@keyframes shake{
+    0%{transform:translate(2px,2px);}
+    25%{transform:translate(-2px,-2px);}
+    50%{transform:translate(2px,-2px);}
+    75%{transform:translate(-2px,2px);}
+}
